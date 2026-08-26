@@ -14,8 +14,7 @@ const { embeddings } = await embedMany({
 
 const { embedding: queryVector } = await embed({
   model: openai.embedding("text-embedding-3-small"),
-  value:
-    "Get me all the fully funded programs for international students in computer science",
+  value: query,
   maxRetries: 5,
 })
 
@@ -45,3 +44,7 @@ Question: ${query}`,
 })
 
 console.log(text)
+
+export async function POST(request: Request){
+  // Get 
+}

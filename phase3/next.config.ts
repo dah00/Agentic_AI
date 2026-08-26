@@ -1,7 +1,14 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from "next"
+import path from "path"
+import { fileURLToPath } from "url"
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url))
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Parent assignments/ also has a package-lock.json; pin Turbopack to phase3.
+  turbopack: {
+    root: projectRoot,
+  },
+}
 
-export default nextConfig;
+export default nextConfig
