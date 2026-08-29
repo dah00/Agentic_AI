@@ -3,7 +3,7 @@ import { z } from "zod"
 
 const client = new Anthropic()
 
-// zod schemas
+// Zod Schemas
 const weatherSchema = z.object({
   latitude: z.string(),
   longitude: z.string(),
@@ -41,7 +41,6 @@ interface GetWeatherResult {
     weathercode: number
   }
 }
-
 interface GetExchangeRateResult {
   amount: number
   base: string
